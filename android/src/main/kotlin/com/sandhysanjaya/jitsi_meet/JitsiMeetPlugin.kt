@@ -15,6 +15,7 @@ import org.jitsi.meet.sdk.JitsiMeetActivity
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions
 import org.jitsi.meet.sdk.JitsiMeetUserInfo
 import java.net.URL
+import java.net.MalformedURLException;
 
 const val TAG = "JITSI_MEET_PLUGIN"
 
