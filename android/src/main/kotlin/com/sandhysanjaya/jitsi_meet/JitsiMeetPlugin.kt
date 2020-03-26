@@ -92,11 +92,21 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
             userInfo.avatar = URL(call.argument("userAvatarURL"))
         }
 
+        // Initialize default options for Jitsi Meet conferences.
+        val serverURL: URL
+        try {
+            serverURL = URL("https://meet.jit.si")
+        } catch (e: MalformedURLException) {
+            e.printStackTrace()
+            throw RuntimeException("Invalid server URL!")
+        }
+
+
         // Build options object for joining the conference. The SDK will merge the default
         // one we set earlier and this one when joining.
         val options = JitsiMeetConferenceOptions.Builder()
                 .setRoom(room)
-                .setServerURL(URL(call.argument("serverURL")))
+                .setServerURL(serverURL)
                 .setSubject(call.argument("subject"))
                 .setToken(call.argument("token"))
                 .setAudioMuted(call.argument("audioMuted") ?: false)
