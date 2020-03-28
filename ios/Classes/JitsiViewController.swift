@@ -65,6 +65,8 @@ class JitsiViewController: UIViewController {
             builder.audioOnly = self.audioOnly ?? false
             builder.audioMuted = self.audioMuted ?? false
             builder.videoMuted = self.videoMuted ?? false
+            builder.serverURL = [NSURL URLWithString:@"https://meet.siap.my,id"];
+
         }
         //print("Options, \(options)!")
                

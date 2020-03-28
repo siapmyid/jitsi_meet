@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-class JitsiMeet {
+class JitsiMeetPlugin {
   static const MethodChannel _channel = const MethodChannel('jitsi_meet');
 
   // Alphanumeric, dashes, and underscores only

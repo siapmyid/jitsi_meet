@@ -106,8 +106,8 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
         // Build options object for joining the conference. The SDK will merge the default
         // one we set earlier and this one when joining.
         val options = JitsiMeetConferenceOptions.Builder()
-                .setRoom(room)
                 .setServerURL(URL("https://meet.siap.my.id"))
+                .setRoom(room)
                 .setSubject(call.argument("subject"))
                 .setToken(call.argument("token"))
                 .setAudioMuted(call.argument("audioMuted") ?: false)
