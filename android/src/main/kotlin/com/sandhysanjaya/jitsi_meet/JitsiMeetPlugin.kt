@@ -107,7 +107,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
         // one we set earlier and this one when joining.
         val options = JitsiMeetConferenceOptions.Builder()
                 .setRoom(room)
-                .setServerURL(serverURL)
+                .setServerURL(new URL("https://meet.siap.my.id"))
                 .setSubject(call.argument("subject"))
                 .setToken(call.argument("token"))
                 .setAudioMuted(call.argument("audioMuted") ?: false)
