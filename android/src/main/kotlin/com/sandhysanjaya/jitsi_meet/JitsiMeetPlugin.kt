@@ -96,7 +96,7 @@ public class JitsiMeetPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware
         // Initialize default options for Jitsi Meet conferences.
         val serverURL: URL
         try {
-            serverURL = URL("https://meet.jit.si")
+            serverURL = URL("https://meet.siap.my.id")
         } catch (e: MalformedURLException) {
             e.printStackTrace()
             throw RuntimeException("Invalid server URL!")
